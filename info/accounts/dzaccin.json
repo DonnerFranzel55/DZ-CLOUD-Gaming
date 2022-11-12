@@ -2,7 +2,7 @@
     "user": [
         {
             "name": "Devin",
-            "last_name": "Zygann",
+            "last_name": "Neumann",
             "bought_games": [
                 "Minecraft",
                 "Terraria"
@@ -10,19 +10,19 @@
             "credit": "200.00",
             "member_since": "2019-05-19T15:39Z",
             "devices":["Android", "iPad"],
-            "email": "rotermond08@gmail.com",
+            "email": "example.moin@dz-mail.com",
             "password": "Z6j&c!sm4c60!d",
             "premium":"true",
             "gamertag": "DonnerFranzel55",
             "friends": "7",
             "friend_with":[
-                "DonnerFranzel55",
-                "FatherlyBaton75",
-                "The_MalonGamer",
-                "Lego44621",
-                "zong4hong",
-                "HahaHennah",
-                "MarikaTimlol111"
+                "ZuogTrim43",
+                "NeunGame45",
+                "SimGamer55",
+                "Legos67",
+                "rickoPS_34",
+                "Lilomp",
+                "TrimMasterImGame"
             ],
             "playpoints": "2195",
             "profile_picture": "https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcS9jr0n8i7LY1tL3U7Aiafa5VpC9F8gm6yC3poNVQBUmjFmHpOndD9WEMJOtrLqjI&format=png&h=120&w=120",
@@ -37,7 +37,7 @@
         },
         {
             "name": "Kevin",
-            "last_name": "Hinrichsen",
+            "last_name": "Jensen",
             "bought_games": [
                 "Minecraft",
                 "Pou"
@@ -45,14 +45,14 @@
             "credit": "23.20",
             "member_since": "2022-05-29T05:14Z",
             "devices": ["iPhone"],
-            "email": "kevin.hinrichsen@icloud.com",
+            "email": "example.moin@dz-mail.com",
             "password": "A§jsb$$q!?ds326",
             "premium":"false",
             "gamertag": "Kevin Adidas",
             "friends": "2",
             "friend_with":[
-                "DonnerFranzel55",
-                "The_MalonGamer"
+                "JimGamer_34",
+                "SimGamer400"
             ],
             "playpoints": "0",
             "profile_picture": "https://play-lh.googleusercontent.com/ixHXzBWPmmKWIBxDMfjbIXK10UQCTDvIYOcs_uLXHCRbdsz2siJFYfb7MqckU8eC3Ks=s64-rw",
@@ -67,7 +67,7 @@
         },
         {
             "name": "Keanu",
-            "last_name": "Ahrens",
+            "last_name": "Simpson",
             "bought_games": [
                 "Minecraft",
                 "Terraria",
@@ -76,16 +76,16 @@
             "credit": "10.00",
             "member_since": "2019-05-19T15:39Z",
             "devices":["Android"],
-            "email": "keanuahrens2907@gmail.com",
+            "email": "example.moin@dz-mail.com",
             "password": "s/jsopw87390U",
             "premium":"false",
             "gamertag": "The_MalonGamer",
             "friends": "4",
             "friend_with":[
-                "HahaHennah",
-                "Lego44621",
-                "Kevin Adidas",
-                "FatherlyBaton75"
+                "SimGamer55",
+                "TrimMasterImGame",
+                "Legos67",
+                "rickoPS_34"
             ],
             "playpoints": "300",
             "profile_picture": "https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcS9jr0n8i7LY1tL3U7Aiafa5VpC9F8gm6yC3poNVQBUmjFmHpOndD9WEMJOtrLqjI&format=png&h=120&w=120",
