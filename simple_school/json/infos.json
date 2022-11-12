@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "name": "Devin",
+            "last_name": "Zygann",
+            "userid": "84392",
+            "gender": "male",
+            "bithday": "2000-06-10",
+            "class": 9,
+            "location": "Germany",
+            "language": "German"
+        }
+    ]
+}

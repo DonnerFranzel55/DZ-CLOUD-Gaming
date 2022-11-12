@@ -1,0 +1,102 @@
+{
+    "user": [
+        {
+            "name": "Devin",
+            "last_name": "Zygann",
+            "bought_games": [
+                "Minecraft",
+                "Terraria"
+            ],
+            "credit": "200.00",
+            "member_since": "2019-05-19T15:39Z",
+            "devices":["Android", "iPad"],
+            "email": "rotermond08@gmail.com",
+            "password": "Z6j&c!sm4c60!d",
+            "premium":"true",
+            "gamertag": "DonnerFranzel55",
+            "friends": "7",
+            "friend_with":[
+                "DonnerFranzel55",
+                "FatherlyBaton75",
+                "The_MalonGamer",
+                "Lego44621",
+                "zong4hong",
+                "HahaHennah",
+                "MarikaTimlol111"
+            ],
+            "playpoints": "2195",
+            "profile_picture": "https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcS9jr0n8i7LY1tL3U7Aiafa5VpC9F8gm6yC3poNVQBUmjFmHpOndD9WEMJOtrLqjI&format=png&h=120&w=120",
+            "userid": "84392",
+            "gender": "male",
+            "bithday": "2000-06-10",
+            "class": 9,
+            "school": "Gesamtschule",
+            "location": "Germany",
+            "language": "German",
+            "lessons": ["Mathematik", " Deutsch", " English"]
+        },
+        {
+            "name": "Kevin",
+            "last_name": "Hinrichsen",
+            "bought_games": [
+                "Minecraft",
+                "Pou"
+            ],
+            "credit": "23.20",
+            "member_since": "2022-05-29T05:14Z",
+            "devices": ["iPhone"],
+            "email": "kevin.hinrichsen@icloud.com",
+            "password": "A§jsb$$q!?ds326",
+            "premium":"false",
+            "gamertag": "Kevin Adidas",
+            "friends": "2",
+            "friend_with":[
+                "DonnerFranzel55",
+                "The_MalonGamer"
+            ],
+            "playpoints": "0",
+            "profile_picture": "https://play-lh.googleusercontent.com/ixHXzBWPmmKWIBxDMfjbIXK10UQCTDvIYOcs_uLXHCRbdsz2siJFYfb7MqckU8eC3Ks=s64-rw",
+            "userid": "38901",
+            "gender": "male",
+            "bithday": "2000-04-11",
+            "class": 9,
+            "school": "Gesamtschule",
+            "location": "Germany",
+            "language": "German",
+            "lessons": ["Geschichte", " Deutsch", " English"]
+        },
+        {
+            "name": "Keanu",
+            "last_name": "Ahrens",
+            "bought_games": [
+                "Minecraft",
+                "Terraria",
+                "Bollons TD 6"
+            ],
+            "credit": "10.00",
+            "member_since": "2019-05-19T15:39Z",
+            "devices":["Android"],
+            "email": "keanuahrens2907@gmail.com",
+            "password": "s/jsopw87390U",
+            "premium":"false",
+            "gamertag": "The_MalonGamer",
+            "friends": "4",
+            "friend_with":[
+                "HahaHennah",
+                "Lego44621",
+                "Kevin Adidas",
+                "FatherlyBaton75"
+            ],
+            "playpoints": "300",
+            "profile_picture": "https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcS9jr0n8i7LY1tL3U7Aiafa5VpC9F8gm6yC3poNVQBUmjFmHpOndD9WEMJOtrLqjI&format=png&h=120&w=120",
+            "userid": "49302",
+            "gender": "male",
+            "bithday": "2000-06-29",
+            "class": 9,
+            "school": "Gesamtschule",
+            "location": "Germany",
+            "language": "German",
+            "lessons": ["Mathematik", " Deutsch", " English"]
+        }
+    ]
+}
