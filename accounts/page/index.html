@@ -43,7 +43,7 @@
                 .then(data => {
                     localStorage.setItem("accounts", JSON.stringify(data));
                     [...data.user].forEach(user => {
-                        if (user.name === "Devin") {
+                        if (user.name === "Sebastian") {
                             fillUserDialog(user)
                         }
                     });
