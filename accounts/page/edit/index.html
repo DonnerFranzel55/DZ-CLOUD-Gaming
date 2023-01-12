@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - DZ CLOUD</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="/css/bootstrap-utilities.min.css">
+    <link rel="stylesheet" href="/css/dzcloudcss.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+rounded-circle:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+        crossorigin="anonymous" />
+
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.esm.js"></script>
+    <script>
+        window.onload = function dialog() {
+
+
+
+            // use fetch to read json
+            fetch('./../../json/dzaccin.json')
+                .then(res => res.json())
+                .then(data => {
+                    localStorage.setItem("accounts", JSON.stringify(data));
+                    [...data.user].forEach(user => {
+                        if (user.name === "Devin") {
+                            fillUserDialog(user)
+                        }
+                    });
+
+                })
+                .catch(err => console.error(err));
+
+
+            let modalArray = document.getElementById('js-profile-pictures');
+
+
+            //BILDER
+
+            // array mit den pfaden für die Bilder
+            let pictureArray = [
+                "./../img/Avatare/jpg/420-elon-30765670.jpg",
+                "./../img/Avatare/jpg/cool-pepe-d239a60d.jpg",
+                "./../img/Avatare/jpg/drake-84363f8e.jpg",
+                "./../img/Avatare/jpg/evil-doge-235c2d80.jpg",
+                "./../img/Avatare/jpg/harold-ca4e0811.jpg",
+                "./../img/Avatare/jpg/leonardo-009af50d.jpg",
+                "./../img/Avatare/jpg/merkel-clap-3116d8c3.jpg",
+                "./../img/Avatare/jpg/mim-chan-9decefed.jpg",
+                "./../img/Avatare/jpg/spongegar-cad444b7.jpg",
+                "./../img/Avatare/jpg/mim-chan-9decefed.jpg",
+                "./../img/Avatare/jpg/spongegar-cad444b7.jpg",
+                "./../img/Avatare/jpg/surprised-pikachu-983150f6.jpg",
+                "./../img/Avatare/jpg/tuxedo-pooh-5d0423df.jpg",
+                "./../img/Avatare/jpg/what-shrek-b7f14e76.jpg",
+                "./../img/Avatare/png/00000-00002-md.png",
+                "./../img/Avatare/png/00002-00005-md.png",
+                "./../img/Avatare/png/00003-00030-md.png",
+                "./../img/Avatare/png/00005-00017-md.png",
+                "./../img/Avatare/png/00006-00025-md.png",
+                "./../img/Avatare/png/00011-00000-md.png",
+                "./../img/Avatare/png/00015-00008-md.png",
+                "./../img/Avatare/png/00016-00003-md.png",
+                "./../img/Avatare/png/00016-00004-md.png",
+                "./../img/Avatare/png/00016-00005-md.png",
+                "./../img/Avatare/png/00016-00006-md.png",
+                "./../img/Avatare/png/00016-00007-md.png",
+                "./../img/Avatare/png/00016-00008-md.png",
+                "./../img/Avatare/png/00016-00009-md.png",
+                "./../img/Avatare/png/00017-00000-md.png",
+                "./../img/Avatare/png/00017-00001-md.png",
+                "./../img/Avatare/png/00017-00005-md.png",
+                "./../img/Avatare/png/00018-00007-md.png",
+                "./../img/Avatare/png/00021-00001-md.png",
+                "./../img/Avatare/png/00021-00005-md.png",
+                "./../img/Avatare/png/00023-00002-md.png",
+                "./../img/Avatare/png/00034-00004-md.png",
+                "./../img/Avatare/png/00044-00000-md.png",
+                "./../img/Avatare/png/00051-00000-md.png",
+                "./../img/Avatare/png/00052-00000-md.png",
+                "./../img/Avatare/png/00054-00000-md.png",
+                "./../img/Avatare/png/00055-00000-md.png",
+                "./../img/Avatare/png/00057-00001-md.png",
+                "./../img/Avatare/png/00060-00001-md.png",
+                "./../img/Avatare/png/00060-00002-md.png",
+                "./../img/Avatare/png/00061-00000-md.png",
+                "./../img/Avatare/png/00067-00004-md.png",
+                "./../img/Avatare/png/Ariele.png",
+                "./../img/Avatare/png/bart.png",
+                "./../img/Avatare/png/dagobert.png",
+                "./../img/Avatare/png/edney.png",
+                "./../img/Avatare/png/enderman.png",
+                "./../img/Avatare/png/fox.png",
+                "./../img/Avatare/png/hermet.png",
+                "./../img/Avatare/png/hock.png",
+                "./../img/Avatare/png/homer.png",
+                "./../img/Avatare/png/hopps.png",
+                "./../img/Avatare/png/hulk.png",
+                "./../img/Avatare/png/kimpossible.png",
+                "./../img/Avatare/png/lisa.png",
+                "./../img/Avatare/png/lupinheist.png",
+                "./../img/Avatare/png/march.png",
+                "./../img/Avatare/png/minnie.png",
+                "./../img/Avatare/png/panda.png",
+                "./../img/Avatare/png/penguin.png",
+                "./../img/Avatare/png/Perry.png",
+                "./../img/Avatare/png/player456.png",
+                "./../img/Avatare/png/robinhood.png",
+                "./../img/Avatare/png/sheep.png",
+                "./../img/Avatare/png/sirengirl.png",
+                "./../img/Avatare/png/SQBoss.png",
+                "./../img/Avatare/png/stormtrooper.png",
+                "./../img/Avatare/png/wednesday.png",
+                "./../img/Avatare/png/wednesdayDad.png",
+                "./../img/Avatare/png/wednesdayMom.png",
+                "./../img/Avatare/png/winnie.png"]
+
+            // img element erstellen mit den jeweiligen pfaden
+            const imgElementArray = [];
+            pictureArray.forEach(pic => {
+                let imgElement = document.createElement('img');
+                imgElement.setAttribute('alt', 'Profile Picture');
+                imgElement.setAttribute('width', '80');
+                imgElement.className = 'rounded-circle';
+                // alle pfade zu den bildern sind notwendig
+                imgElement.src = pic;
+                imgElementArray.push(imgElement);
+            });
+
+            let divRowElement = document.createElement('div');
+            divRowElement.setAttribute('class', 'row');
+
+            let sectionElement = document.createElement('section');
+
+
+            let divContainerElement = document.createElement('div');
+            divContainerElement.setAttribute('class', 'container-fluid');
+
+
+            // row element append child to get every divNearImg Element
+            imgElementArray.forEach(pic => {
+                let divNearImg = document.createElement('div');
+                divNearImg.setAttribute('class', 'col-xl-2 col-sm-6 col-12 mb-4');
+                divNearImg.setAttribute('style', 'margin-right: 10px;')
+                divNearImg.appendChild(pic);
+                divRowElement.appendChild(divNearImg);
+            })
+
+
+            sectionElement.appendChild(divRowElement);
+            divContainerElement.appendChild(sectionElement);
+
+            modalArray.appendChild(divRowElement);
+
+        }
+
+        function fillUserDialog(user) {
+
+            let profilePicture = user.profile_picture;
+
+            let userProfilePictureElement = document.getElementById('user-profile-picture');
+            userProfilePictureElement.src = profilePicture;
+
+
+            let jumbobackground = user.color;
+            let profilebackgroudcolor = document.getElementById("profilebackground");
+            profilebackgroudcolor.style.backgroundColor = jumbobackground;
+
+            let playpoints = user.playpoints
+
+            let name = user.name;
+            let name1 = user.last_name;
+
+            let gamerid = user.gamertag;
+            let email = user.email;
+            let userid = user.userid;
+            let birthday = user.birthday;
+            let gender = user.gender;
+            let language = user.language;
+
+
+
+            document.getElementById("credit");
+
+            document.getElementById("points");
+
+            document.getElementById("accounthost");
+
+            document.getElementById("nameid").value;
+
+            document.getElementById("mygamerid").value;
+            document.getElementById("myemail").value;
+            document.getElementById("mybirth").value;
+            document.getElementById("mygender").value;
+            document.getElementById("mylang").value;
+            document.getElementById("myuserid");
+
+
+            nameid.value = name + " " + name1;
+            mygamerid.value = gamerid;
+            myemail.value = email;
+            mybirth.value = birthday;
+            mygender.value = gender;
+            mylang.value = language;
+            myuserid.innerHTML = userid;
+
+            accounthost.innerHTML = name + " " + name1;
+
+
+            points.innerHTML = playpoints;
+
+
+
+        }
+
+
+
+
+
+    </script>
+    <link rel="shortcut icon" href="/img/pictures/logo/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img src="/img/pictures/logo/00226b96-968a-4360-b595-30ff04cf3967.png" height="50"
+                            alt="DZ Cloud Logo" loading="lazy" />
+                    </a>
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/simple_school/">School</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cloud_gaming/">Cloud Gaming</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/app_store/">App Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/header/app/">App</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/infos/news/">News</a>
+                        </li>
+
+                    </ul>
+                    <!-- Left links -->
+                </div>
+                <!-- Collapsible wrapper -->
+
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+
+                    <!-- Settings -->
+                    <div style="margin-right: 10px;" class="dropdown ">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="material-symbols-outlined">
+                                        person
+                                    </span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item dropdown"
+                                        href="/accounts/page/#725c2cdbc213e8b40b5039111d5695d9b9ab4048131b0eaf09060a903e38cb1f">
+                                        Account </a>
+                                    <a class="dropdown-item" href="#"> Subscription </a>
+                                    <a class="dropdown-item" href="#"> Settings </a>
+                                    <a class="dropdown-item" href="#0"> Logout </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Sign In
+                    </button>
+
+                    <!-- The Login -->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Sign In</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    Please enter your Log In data to login.
+                                    <form action="">
+                                        <div class="form-floating mb-3 mt-3">
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="Enter email">
+                                            <label for="email">Email</label>
+                                        </div>
+
+                                        <div class="form-floating mt-3 mb-3">
+                                            <input type="password" class="form-control" id="pwd"
+                                                placeholder="Enter password">
+                                            <label for="pwd">Password</label>
+                                        </div>
+                                        <button class="btn btn-outline-primary w-100"> Log In</button>
+                                    </form>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Sign
+                                        Up</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Continue as
+                                        Guest</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Account Color -->
+                    <div class="modal" id="colorModal">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Choose an Profile Color</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <section>
+                                            <div class="row">
+                                                <div class="col-xl-2 col-sm-6 col-12 mb-4">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #54a81b;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #107c10;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #108272;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #148282;"></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #1081ca;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #1073d6;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #193e91;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #744da9;"></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #b144c0;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #ed5588;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #bf1077;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #a21025;"></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #e31123;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #eb4910;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #eb8c10;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #724f2f;"></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #7e715c;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #547a72;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #677488;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #737373;"></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #4c4a4b;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #707070;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #6b6b6b;"></button>
+                                                                </td>
+                                                                <td><button class="btn"
+                                                                        style="width: 90px; height: 90px; background-color: #3c3c3c;"></button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                                </section>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+
+
+                    </div>
+
+                    <!-- The Account Color -->
+                    <div  class="modal" id="ProfileLink">
+                        <div class="modal-dialog ">
+                            <div class="modal-content" style="background-color: #282828;">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title text-white">Choose an Extern Profile</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <section>
+                                            <div class="row">
+                                                <div class="col-12 text-center">
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/Apple.png"
+                                                            width="20" alt=""> Anmeldung mit Apple</button>
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/Epic_Games.png"
+                                                            width="20" alt=""> Anmeldung mit Epic Games</button>
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/Facebook.png"
+                                                            width="20" alt=""> Anmeldung mit Facebook</button>
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/GitHub.png"
+                                                            width="20" alt=""> Anmeldung mit GitHub</button>
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/Google.png"
+                                                            width="20" alt=""> Anmeldung mit Google</button>
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/Nintendo.png"
+                                                            width="20" alt=""> Anmeldung mit Nintendo</button>
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/Playstation.png"
+                                                            width="20" alt=""> Anmeldung mit Playstation</button>
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/Reddit.png"
+                                                            width="20" alt=""> Anmeldung mit Reddit</button>
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/Spotyfi.png"
+                                                            width="20" alt=""> Anmeldung mit Spotify</button>
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/Steam.png"
+                                                            width="20" alt=""> Anmeldung mit Steam</button>
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/Twitch.png"
+                                                            width="20" alt=""> Anmeldung mit Twitch</button>
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/Twitter.png"
+                                                            width="20" alt=""> Anmeldung mit Twitter</button>
+                                                    <button class="btn btn-dark w-100" style="margin-top: 5px;"> <img
+                                                            style="float: left;" src="./../img/link/XBOX.png" width="20"
+                                                            alt=""> Anmeldung mit XBOX</button>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                                </section>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+
+
+                    </div>
+
+                    <!-- The AccountPicture -->
+                    <div class="modal" id="ProPicModal">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Choose an Profile Picture</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="container-fluid mt-2">
+                                        <section id="js-profile-pictures">
+                                        </section>
+                                    </div>
+                                </div>
+                                </section>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+
+    </header>
+    <!-- Jumbotron -->
+    <div class="mt-2 p-5 text-white rounded" id="profilebackground">
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#ProPicModal" style="float: left;">
+            <img class="rounded-circle" id="user-profile-picture" src="/img/pictures/logo/favicon.png" alt="Avatar"
+                width="120"></button>
+        <h1 id="accounthost">Sign In</h1>
+        <p>
+        <h6><span class="badge bg-dark rounded-pill">P</span> <span id="points">0</span></h6>
+        </p>
+        <p>
+            <button title="Profilbild &#228;ndern" class="btn" data-bs-target="#ProPicModal"
+                data-bs-toggle="modal"><span class="material-symbols-outlined">
+                    account_circle
+                </span>
+            </button>
+            <button title="Profilfarbe &#228;ndern" class="btn" data-bs-target="#colorModal"
+                data-bs-toggle="modal"><span class="material-symbols-outlined">
+                    palette
+                </span>
+            </button>
+            <button title="Externeaccounts verlinken" class="btn" data-bs-target="#ProfileLink"
+                data-bs-toggle="modal"><span class="material-symbols-outlined">
+                    add_link
+                </span>
+            </button>
+
+        </p>
+    </div>
+    <!-- Jumbotron -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <form action="./../#725c2cdbc213e8b40b5039111d5695d9b9ab4048131b0eaf09060a903e38cb1f">
+                <div class="mb-3 mt-3">
+                    <label for="email" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="nameid" placeholder="Choose new Name">
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="mySwitch" name="namevisiable" value="yes">
+                    <label class="form-check-label" for="mySwitch">Zeige dein Namen öffendlich</label>
+
+                </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Gamertag:</label>
+                    <input type="text" class="form-control" id="mygamerid" disabled placeholder="Enter new Gamertag">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">E-Mail:</label>
+                    <input type="email" class="form-control" id="myemail" placeholder="Enter new E-Mail">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="mypswd" placeholder="Enter new Password">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Geburtstag:</label>
+                    <input type="date" class="form-control" id="mybirth" disabled placeholder="Enter new Birthday">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Gender:</label>
+                    <input type="text" class="form-control" id="mygender" placeholder="Enter new Gender">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Sprache:</label>
+                    <input type="text" class="form-control" id="mylang" placeholder="Enter new Gender">
+                </div>
+                <div class="mb-3">
+                    <h5 for="pwd" class="form-label">Deine USERID: <span id="myuserid"></span></h5>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="./../#725c2cdbc213e8b40b5039111d5695d9b9ab4048131b0eaf09060a903e38cb1f" type="submit"
+                    class="btn btn-danger">Cancel</a>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <img src="/img/pictures/logo/00226b96-968a-4360-b595-30ff04cf3967.png" alt="DZ CLOUD LOGO" width="90">
+                <p>
+                    More Link to our Project and Services
+                </p>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Explore</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="/" class="text-white">Home</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white">Cloud Gaming</a>
+                            </li>
+                            <li>
+                                <a href="/app_store/" class="text-white">App Store</a>
+                            </li>
+                            <li>
+                                <a href="/dz_cloud_os/" class="text-white">Operating System</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">DZ CLOUD Family</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Resources</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="https://fonts.google.com/icons" class="text-white">Icons</a>
+                            </li>
+                            <li>
+                                <a href="/infos/status/" class="text-white">Status</a>
+                            </li>
+                            <li>
+                                <a href="/de/d/c/" class="text-white">Download Center</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Support</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Account</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Payment</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Subscription</a>
+                            </li>
+                            <li>
+                                <a href="/de/return/" class="text-white">Return</a>
+                            </li>
+                            <li>
+                                <a href="/de/support/" class="text-white">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">More</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Developer</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Framework</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Third party providers</a>
+                            </li>
+                            <li>
+                                <a href="/verify/" class="text-white">Verify</a>
+                            </li>
+                            <li>
+                                <a href="/infos/news/" class="text-white">News</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2018 - 2023 Copyright:
+            <a class="text-white" href="/">DZ CLOUD</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</body>
+
+</html>

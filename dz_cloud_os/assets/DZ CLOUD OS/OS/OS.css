@@ -1,0 +1,13 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden
+}
+
+html {
+    white-space: nowrap;
+}
+
+body {
+    overflow-x: hidden
+}

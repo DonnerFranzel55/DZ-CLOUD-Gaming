@@ -1,0 +1,32 @@
+html {
+    white-space: nowrap;
+}
+
+body {
+    overflow-x: hidden
+}
+
+body {
+    background-image: url("/dz_cloud_os/assets/DZ CLOUD OS/background/Sunrise/Sunrise 1 - Login.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+input {
+    height: 15px;
+    width: 194px;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: white;
+    border: none;
+    border-radius: 2pt;
+    border-bottom: 1px solid #1515ff;
+}
+
+button {
+    height: 20px;
+    background-color: #3d4344;
+    color: white;
+    border: none;
+    border-radius: 2pt;
+    border-bottom: 1px solid #1515ff;
+}
