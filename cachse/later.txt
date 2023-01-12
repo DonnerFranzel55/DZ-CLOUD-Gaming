@@ -1,0 +1,4 @@
+<span class="next-tag live-badge">Start in 30'</span>
+<span class="live-tag live-badge">LIVE</span>
+<span class="end-tag live-badge">Final Whistle</span>
+<img src="/img/l/loader.svg" alt="loading" width="40">

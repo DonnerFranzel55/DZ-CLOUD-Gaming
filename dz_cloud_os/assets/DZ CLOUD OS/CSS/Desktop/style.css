@@ -1,0 +1,200 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #191919e7;
+    color: white;
+}
+
+.footer1 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+img {
+    margin-left: 5px;
+    cursor: pointer;
+    filter: none;
+}
+
+.header {
+    margin-left: 1px;
+}
+
+.Logoutbtn {
+    background-color: crimson;
+    color: #fff;
+}
+
+
+/* Popup container */
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+/* The actual popup (appears on top) */
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 579px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: -220%;
+    margin-left: -29px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Popup arrow */
+
+.popup .popuptext::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden
+}
+
+html {
+    white-space: nowrap;
+}
+
+body {
+    overflow-x: hidden
+}
+
+.body {
+    background-image: url("/dz_cloud_os/assets/DZ CLOUD OS/background/Windows Standard/Windows 11 Wallpaper hell.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+i {
+    cursor: pointer;
+}
+
+
+/* Popup container */
+
+.popup1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+/* The actual popup (appears on top) */
+
+.popup .popuptext1 {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+/* Popup arrow */
+
+.popup1 .popuptext1::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+
+.popup1 .show1 {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.clear {
+    clear: left;
+}

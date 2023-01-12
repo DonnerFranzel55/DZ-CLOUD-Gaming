@@ -1,0 +1,327 @@
+/* Netflix */
+@font-face {
+    font-family: 'Netflix';
+    src: url(/font/woff2/Netflix/NetflixSans_W_Rg.woff2);
+}
+
+@font-face {
+    font-family: 'Netflix-md';
+    src: url(/font/woff2/Netflix/NetflixSans_W_Md.woff2);
+}
+
+@font-face {
+    font-family: 'Netflix-bd';
+    src: url(/font/woff2/Netflix/NetflixSans_W_Bd.woff2);
+}
+
+/* Netflix */
+
+/* DZ CLOUD */
+@font-face {
+    font-family: 'DZCLOUDSans';
+    src: url(/font/ttf/dz-cloud/dz-cloud-sans-Regular.ttf);
+}
+
+/* DZ CLOUD */
+
+/* Amazon */
+@font-face {
+    font-family: 'AmazonSans';
+    src: url(/font/woff2/Amazon/AmazonSans.woff2);
+}
+
+@font-face {
+    font-family: 'AmazonSans_I';
+    src: url(/font/woff2/Amazon/AmazonSans_I.woff2);
+}
+
+/* Amazon */
+
+/* Minecarft */
+@font-face {
+    font-family: 'MinecraftSans';
+    src: url(/font/otf/minecraft/MinecraftRegular-Bmg3.otf);
+}
+@font-face {
+    font-family: 'MinecraftSans1';
+    src: url(/font/otf/minecraft/MinecraftBold-nMK1.otf);
+}
+@font-face {
+    font-family: 'MinecraftSans2';
+    src: url(/font/otf/minecraft/MinecraftBoldItalic-1y1e.otf);
+}
+@font-face {
+    font-family: 'MinecraftSans3';
+    src: url(/font/otf/minecraft/MinecraftItalic-R8Mo.otf);
+}
+
+/* Minecraft */
+
+/* PayPal */
+@font-face {
+    font-family: 'PayPalSansSR';
+    src: url(/font/woff2/PayPal/PayPalSansSmall-Regular.woff2);
+}
+
+@font-face {
+    font-family: 'PayPalSansBL';
+    src: url(/font/woff2/PayPal/PayPalSansBig-Light.woff2);
+}
+
+/* PayPal */
+
+/* Samsung */
+@font-face {
+    font-family: 'SamsungSans-Rg';
+    src: url(/font/woff2/Samsung/SamsungOne-400.woff2);
+}
+
+@font-face {
+    font-family: 'SamsungSans-Md';
+    src: url(/font/woff2/Samsung/SamsungOne-700.woff2);
+}
+
+@font-face {
+    font-family: 'SamsungSans-Bd';
+    src: url(/font/woff2/Samsung/SamsungSharpSansBd.woff2);
+}
+
+/* Samsung */
+
+/* Vodafone */
+@font-face {
+    font-family: 'Vodafone-Rg';
+    src: url(/font/woff2/Vodafone/VodafoneRg.woff2);
+}
+
+@font-face {
+    font-family: 'Vodafone-Lt';
+    src: url(/font/woff2/Vodafone/VodafoneLt.woff2);
+}
+
+@font-face {
+    font-family: 'Vodafone-web';
+    src: url(/font/woff2/Vodafone/vodafonergbd-webfont.woff2);
+}
+
+/* Vodafone */
+
+
+/* Apple */
+@font-face {
+    font-family: 'Apple-Md';
+    src: url(/font/woff/apple/SFUIDisplay-Medium.woff);
+}
+
+@font-face {
+    font-family: 'Apple-Ld';
+    src: url(/font/woff/apple/SFUIText-Light.woff);
+}
+
+@font-face {
+    font-family: 'Apple-Md-txt';
+    src: url(/font/woff/apple/SFUIText-Medium.woff);
+}
+
+/* Apple */
+
+/* Apple */
+@font-face {
+    font-family: 'Telekom-Rg';
+    src: url(/font/woff/telekom/TeleGroteskScreen-Regular.woff);
+}
+
+/* Apple */
+
+/* Spotify */
+@font-face {
+    font-family: 'Spotify-Bl';
+    src: url(/font/woff2/Spotify/SpotifySans-Black.woff2);
+}
+@font-face {
+    font-family: 'Spotyfi-Bd-t';
+    src: url(/font/woff2/Spotify/SpotifySans-Bold-Text.woff2);
+}
+@font-face {
+    font-family: 'Spotify-Bd';
+    src: url(/font/woff2/Spotify/SpotifySans-Bold.woff2);
+}
+@font-face {
+    font-family: 'Spotify-Bo';
+    src: url(/font/woff2/Spotify/SpotifySans-Book.woff2);
+}
+
+/* Spotify */
+
+/* One Piece */
+@font-face {
+    font-family: 'OnePiece';
+    src: url(/font/ttf/OnePiece/OnePieceSans.ttf);
+}
+
+/* One Piece */
+
+/* Phasmo */
+@font-face {
+    font-family: 'PhasmoSans1';
+    src: url(/font/woff/Phasmophobia/PhasmophobiaSans.font-woff);
+}
+@font-face {
+    font-family: 'PhasmoSans2';
+    src: url(/font/woff/Phasmophobia/PhasmophobiaText.font-woff);
+}
+
+/* Phasmo */
+
+/* Wiki Fandom */
+@font-face {
+    font-family: 'WikiFanSans1';
+    src: url(/font/woff2/FandomWiki/WikiFandomSans1.woff2);
+}
+@font-face {
+    font-family: 'WikiFanSans2';
+    src: url(/font/woff2/FandomWiki/WikiFandomSans2.woff2);
+}
+@font-face {
+    font-family: 'WikiFanSans3';
+    src: url(/font/woff2/FandomWiki/WikiFandomSans3.woff2);
+}
+
+/* Wiki Fandom */
+
+
+
+
+
+
+
+
+
+.netflix-font {
+    font-family: 'Netflix';
+}
+
+.netflix-font-1 {
+    font-family: 'Netflix-md';
+}
+
+.netflix-font-2 {
+    font-family: 'Netflix-bd';
+}
+
+
+.dzsans {
+    font-family: 'DZCLOUDSans';
+}
+
+
+.amzs {
+    font-family: 'AmazonSans';
+}
+
+.amzsi {
+    font-family: 'AmazonSans_I';
+}
+
+
+.minecraftsans {
+    font-family: 'MinecraftSans';
+}
+.minecraftsans1 {
+    font-family: 'MinecraftSans1';
+}
+.minecraftsans2 {
+    font-family: 'MinecraftSans2';
+}
+.minecraftsans3 {
+    font-family: 'MinecraftSans3';
+}
+
+
+.paypaln {
+    font-family: 'PayPalSansSR';
+}
+
+.paypals {
+    font-family: 'PayPalSansBL';
+}
+
+.samsung {
+    font-family: 'SamsungSans-Rg';
+}
+
+.samsung1 {
+    font-family: 'SamsungSans-Md';
+}
+
+.samsung2 {
+    font-family: 'SamsungSans-Bd';
+}
+
+
+.voda {
+    font-family: 'Vodafone-Rg';
+}
+
+.voda1 {
+    font-family: 'Vodafone-Lt';
+}
+
+.voda2 {
+    font-family: 'Vodafone-web';
+}
+
+.apple {
+    font-family: 'Apple-Md';
+}
+
+.apple1 {
+    font-family: 'Apple-Ld';
+}
+
+.apple2 {
+    font-family: 'Apple-Md-txt';
+}
+
+.telekom {
+    font-family: 'Telekom-Rg';
+}
+
+.spotify {
+    font-family: 'Spotify-Bl';
+}
+
+.spotify1 {
+    font-family: 'Spotyfi-Bd-t';
+
+}
+
+.spotify2 {
+    font-family: 'Spotify-Bd';
+
+}
+
+.spotify3 {
+    font-family: 'Spotify-Bo';
+}
+
+.OnePiece {
+    font-family: 'OnePiece';
+}
+
+.Phasmo1 {
+    font-family: 'PhasmoSans1';
+}
+.Phasmo2 {
+    font-family: 'PhasmoSans2';
+}
+
+.WikiFan1 {
+    font-family: 'WikiFanSans1';
+}
+.WikiFan2 {
+    font-family: 'WikiFanSans2';
+}
+.WikiFan3 {
+    font-family: 'WikiFanSans3';
+}
